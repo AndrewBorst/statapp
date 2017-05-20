@@ -72,12 +72,17 @@
 
       {% if messages %}
           {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+              <div class="alert {% if message.tags %}alert<-{{ message.tags }}{% endif %}">{{ message }}</div>
           {% endfor %}
       {% endif %}
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <p>Notes on statapp</p>
+        <ul>
+        <li><a href="https://www.djangoproject.com/">Django</a> framework. </li>
+        <li><a href="https://sentry.io/welcome/">Sentry</a> for logging. </li>
+        <li><a href="http://andrealmar.com/2016/03/django-whitenoise/"> Whitenoise</a> to serve static files. </li>
+        </ul>
       {% endblock content %}
 
     </div> <!-- /container -->
