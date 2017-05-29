@@ -1,1 +1,38 @@
 {% extends "base.html" %}
+{% load staticfiles i18n %}
+
+<body>
+
+    <div class="container">
+
+        {% if messages %} {% for message in messages %}
+        <div class="alert {% if message.tags %}alert<-{{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %} {% endif %} {% block content %}
+        <p><br></p>
+           <img src="{% static 'images/borstlogo_sm.png'' %}" alt="Borst DM Logo"/></a>        
+        <p><img src="{% static 'images/profile.jpg' %}" alt="Hi!" /></p>
+        <ul class="list-group">
+            <li class="list-group-item">Custom EDC builds</li>
+            <li class="list-group-item">Integrations</li>
+            <li class="list-group-item">Reporting and Visualizations</li>
+            <li class="list-group-item">Free advice</li>
+        </ul>
+        <p><br></p>
+        <p>Technical notes on our working blueprint to quickly spin up a professional and HIPAA-compliant electronic data capture
+            system: </p>
+        <ul class="list-unstyled">
+            <div class="jumbotron">
+                <li><a href="https://www.djangoproject.com/">Django</a> framework. </li>
+                <li><a href="https://www.postgresql.org/about/">PostgreSQL</a> database.</li>
+                <li><a href="https://www.intenct.nl/projects/django-allauth/">Allauth</a> for authenication.</li>
+                <li><a href="https://sentry.io/welcome/">Sentry</a> for logging. </li>
+                <li><a href="http://whitenoise.evans.io/en/stable/"> Whitenoise</a> to serve static files. </li>
+                <li><a href="http://getbootstrap.com/"> Boostrap</a> to style user interface for mobile devices. </li>
+            </div>
+        </ul>
+        {% endblock content %}
+
+    </div>
+    <!-- /container -->
+
+</body>
