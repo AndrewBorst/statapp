@@ -36,7 +36,6 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 
     # Useful template tags:
@@ -73,9 +72,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-WHITENOISE_MIDDLEWARE = ['whitenoise.middleware.WhiteNoiseMiddleware', ]
-MIDDLEWARE = WHITENOISE_MIDDLEWARE + MIDDLEWARE
 
 
 # MIGRATIONS CONFIGURATION
@@ -203,7 +199,7 @@ STATICFILES_FINDERS = [
 
 # Static Assets
 # ------------------------
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # MEDIA CONFIGURATION
 # ------------------------------------------------------------------------------
