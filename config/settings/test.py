@@ -6,6 +6,7 @@ Test settings
 
 from .base import *  # noqa
 
+print('in test.py')
 
 # DEBUG
 # ------------------------------------------------------------------------------
