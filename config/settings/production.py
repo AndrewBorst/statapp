@@ -76,10 +76,10 @@ INSTALLED_APPS += (
     'storages',
 )
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'    
-
+STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
 # URL that handles the media served from MEDIA_ROOT, used for managing
 # stored files.
-MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = '/static/'
 
 
 # EMAIL
