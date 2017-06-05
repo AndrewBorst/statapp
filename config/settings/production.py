@@ -76,12 +76,10 @@ INSTALLED_APPS += (
     'storages',
 )
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'    
-STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+# STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
 # URL that handles the media served from MEDIA_ROOT, used for managing
 # stored files.
-MEDIA_URL = '/static/'
-
-
+# MEDIA_URL = '/media/'
 # EMAIL
 # ------------------------------------------------------------------------------
 # DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
