@@ -72,9 +72,6 @@ INSTALLED_APPS += ['gunicorn', ]
 # See: http://django-storages.readthedocs.io/en/latest/index.html
 INSTALLED_APPS += ['storages', ]
 
-INSTALLED_APPS += (
-    'storages',
-)
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'    
 # STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
 # URL that handles the media served from MEDIA_ROOT, used for managing
