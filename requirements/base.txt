@@ -15,7 +15,9 @@ whitenoise==3.3.0
 
 # Forms
 django-braces==1.11.0
-django-crispy-forms==1.6.1
+django-forms==1.6.1
+django-contact-form==1.4.1
+akismet==1.0.1
 
 # Models
 django-model-utils==3.0.0
@@ -23,7 +25,7 @@ django-model-utils==3.0.0
 # Images
 Pillow==4.1.1
 
-# Password storage
+# Password storage  
 argon2-cffi==16.3.0
 
 # For user registration, either via email or social

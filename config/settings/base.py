@@ -45,6 +45,7 @@ DJANGO_APPS = [
     'django.contrib.admin',
 ]
 THIRD_PARTY_APPS = [
+    'contact_form',  # contact 
     'crispy_forms',  # Form layouts
     'allauth',  # registration
     'allauth.account',  # registration
@@ -94,17 +95,20 @@ FIXTURE_DIRS = (
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', 
-    default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_USE_TLS = True  
+EMAIL_HOST = 'smtp.gmail.com'  
+EMAIL_PORT = 587  
+EMAIL_HOST_USER = 'Andrew.C.Borst@gmail.com'  # this is my email address, use yours
+EMAIL_HOST_PASSWORD = env.get_value('EMAIL_HOST_PASSWORD')   # set environ yourself
+
+
+ADMINS = (
+    ('Andrew Borst', 'Andrew.C.Borst@gmail.com'),   # email will be sent to your_email
+)
 
 # MANAGER CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [
-    ("""Andrew Borst""", 'andrew.c.borst@gmail.com'),
-]
-
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
 # DATABASE CONFIGURATION
