@@ -1,10 +1,6 @@
 """
 Production Configurations
 
-- Use Amazon's S3 for storing static files and uploaded media
-- Use mailgun to send emails
-- Use Redis for cache
-
 - Use sentry for error logging
 
 
@@ -60,7 +56,7 @@ X_FRAME_OPTIONS = 'DENY'
 # ------------------------------------------------------------------------------
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com', ])
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['borst.solutions', ])
 # END SITE CONFIGURATION
 
 INSTALLED_APPS += ['gunicorn', ]
