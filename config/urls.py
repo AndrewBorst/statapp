@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
     url(r'^contact/', include('contact_form.urls')),
-    url(r'^B7061121B6C0142AE02D66B71F847186.txt$', dcv_validation, name='dcv_validation'),    
+    url(r'^28DEBB2B1A4DBCD4063E02EDE09592EB.txt$', dcv_validation, name='dcv_validation'),    
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
 
