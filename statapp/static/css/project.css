@@ -36,3 +36,11 @@
 [hidden][style="display: block;"] {
   display: block !important;
 }
+
+#carouselContent {
+  color: white;
+  background-color: #333;
+  border-color: red;
+  width: 100%;
+  height: auto;
+}

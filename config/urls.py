@@ -9,6 +9,7 @@ from statapp.views import dcv_validation
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^dash/$', TemplateView.as_view(template_name='pages/dash.html'), name='dash'),
     url(r'^store/$', TemplateView.as_view(template_name='pages/store.html'), name='store'),
     url(r'^contact/', include('contact_form.urls')),
 #    url(r'^28DEBB2B1A4DBCD4063E02EDE09592EB.txt$', dcv_validation, name='dcv_validation'),    

@@ -1,20 +1,64 @@
 {% extends "base.html" %}
 
-  <body>
+<body>
 
-    <div class="container">
+  <div class="container">
 
-      {% if messages %} {% for message in messages %}
-      <div class="alert {% if message.tags %}alert<-{{ message.tags }}{% endif %}">{{ message }}</div>
-      {% endfor %} {% endif %} 
-      {% block content %}
-      <br>
-      <a href="https://gallery.shinyapps.io/087-crandash/">CRAN Dashboard iframed as a placeholder until I finish my dashboard:</a>
-      <br><br>
-      <iframe src="https://gallery.shinyapps.io/087-crandash/" width="1200" height="800"></iframe>
-      {% endblock content %}
-  
+    {% if messages %} {% for message in messages %}
+    <div class="alert {% if message.tags %}alert<-{{ message.tags }}{% endif %}">{{ message }}
     </div>
-    <!-- /container -->
+    {% endfor %} {% endif %} {% block content %}
+    <div class="jumbotron">
+      <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active align-items-center flex-column p-4">
+            <h1>GATHER</h1>
+          </div>
+          <div class="carousel-item align-items-center flex-column p-4">
+            <h1>ANALYZE</h1>
+          </div>
+          <div class="carousel-item align-items-center flex-column p-4">
+            <h1>PREDICT</h1>
+          </div>
+          <div class="carousel-item align-items-center flex-column p-4">
+            <h1>LEARN</h1>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h3>Traders are on an infinite data science path of Gathering, Analyzing, Predicting, and Learning. I focus on weekly trends
+        using the broader market environment to find the probability of price directions (up, stable, or down). I trade USO
+        options and my technical analysis based on multivariate regression modeling is tailored for that purpose. It has
+        taken me about a dozen years of obsessive observing to come to my understanding of the oil markets. Since USO options
+        are a second-order derivative of WTI, there are USO-specific items that I consider when trading these options. For
+        example, USO is affected by the condition of contango/backwardation in the WTI futures curve. 
+        
+        I offer a live analytics for registered users. If I have a reach a critical mass in users, I may start 
+        charging for my work. So sign-up now and watch some unique metrics for free. 
+      </h3>
+      <h5><br>
+      <ul class="list-group">
+        <li class="mb-1">This is site is secure.</li>
+        <li class="mb-1">I will not share your email address.</li>
+        <li class="mb-1">I do not give investment advice.</li>
+        </li>
+      </ul>
+      </h5>
+    </div>
+    <p><br><br></p>
+    <p>Technical notes on the site: </p>
+      <ul class="list-group">
+          <li class="list-group-item"><a href="https://aws.amazon.com/">Amazon Web Services</a>&nbsp; cloud-based hosting. </li>
+          <li class="list-group-item"><a href="https://www.nginx.com/">Nginx</a>&nbsp; server. </li>
+          <li class="list-group-item"><a href="https://www.djangoproject.com/">Django</a>&nbsp; framework. </li>
+          <li class="list-group-item"><a href="https://www.postgresql.org/about/">PostgreSQL</a>&nbsp; database.</li>
+          <li class="list-group-item"><a href="https://www.intenct.nl/projects/django-allauth/">Allauth</a>&nbsp;  for authenication.</li>
+          <li class="list-group-item"><a href="https://sentry.io/welcome/">Sentry</a>&nbsp; for logging. </li>
+          <li class="list-group-item"><a href="http://getbootstrap.com/"> Bootstrap</a>&nbsp; to style user interface for mobile devices. </li>
+      </ul>
+    {% endblock content %}
 
-  </body>
+  </div>
+  <!-- /container -->
+
+</body>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+  <body>
+
+    <div class="container">
+
+      {% if messages %} {% for message in messages %}
+      <div class="alert {% if message.tags %}alert<-{{ message.tags }}{% endif %}">{{ message }}
+      </div>
+      {% endfor %} {% endif %} 
+      {% block content %}
+      <br>
+      <a href="https://gallery.shinyapps.io/087-crandash/">CRAN Dashboard iframed as a placeholder until I am further along with my dashboard:</a>
+      <br><br>
+      <iframe src="https://gallery.shinyapps.io/087-crandash/" width="1200" height="800"></iframe>
+      {% endblock content %}-->
+  
+    </div>
+    <!-- /container -->
+
+  </body>
